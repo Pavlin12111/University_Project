@@ -1,4 +1,3 @@
--- Таблица за студенти
 CREATE TABLE Students (
     student_id INT PRIMARY KEY,
     first_name VARCHAR(50),
@@ -6,14 +5,12 @@ CREATE TABLE Students (
     date_of_birth DATE
 );
 
--- Таблица за курсове
 CREATE TABLE Courses (
     course_id INT PRIMARY KEY,
     course_name VARCHAR(100),
     credits INT
 );
 
--- Таблица за преподаватели
 CREATE TABLE Professors (
     professor_id INT PRIMARY KEY,
     first_name VARCHAR(50),
@@ -21,7 +18,6 @@ CREATE TABLE Professors (
     department VARCHAR(100)
 );
 
--- Таблица за записвания на курсове
 CREATE TABLE Enrollments (
     enrollment_id INT PRIMARY KEY,
     student_id INT,
@@ -32,7 +28,6 @@ CREATE TABLE Enrollments (
     FOREIGN KEY (course_id) REFERENCES Courses(course_id)
 );
 
--- Таблица за преподаване на курсове
 CREATE TABLE Teaches (
     teaches_id INT PRIMARY KEY,
     professor_id INT,
